@@ -1,4 +1,0 @@
-class First{
-  int main(){
-  }
-}
