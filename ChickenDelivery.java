@@ -62,7 +62,10 @@ public class ChickenDelivery {
                     }
                 }
             }
-            comp(chicken.size(), M, "");
+            if (M <= chicken.size() / 2)
+                comp(chicken.size(), M, "");
+            else
+                comp(chicken.size(), chicken.size() - M, "");
             System.out.println(chicken.size());
             System.out.println(home.size());
             int min = Integer.MAX_VALUE;
