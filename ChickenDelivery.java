@@ -9,7 +9,7 @@ import java.util.ArrayList;
 class Pos {
     int x, y;
 
-    Pos(int s, int y) {
+    Pos(int x, int y) {
         this.x = x;
         this.y = y;
     }
@@ -29,8 +29,7 @@ public class ChickenDelivery {
 
     static void comp(int n, int c, String s) {
         if (n <= 0) {
-            if (c <= 0) {
-                System.out.println(s);
+            if (c == 0) {
                 store.add(s);
             }
             return;
@@ -41,6 +40,7 @@ public class ChickenDelivery {
                 comp(n - 1, c - 1, s + "1");
                 comp(n - 1, c, s + "0");
             }
+
         }
     }
 
@@ -50,27 +50,23 @@ public class ChickenDelivery {
             StringTokenizer st = new StringTokenizer(br.readLine());
             N = Integer.parseInt(st.nextToken());
             M = Integer.parseInt(st.nextToken());
-            map = new int[N][M];
+            map = new int[N][N];
             for (int i = 0; i < N; i++) {
                 st = new StringTokenizer(br.readLine());
-                for (int j = 0; j < M; j++) {
+                for (int j = 0; j < N; j++) {
                     map[i][j] = Integer.parseInt(st.nextToken());
                     if (map[i][j] == 1) {
                         home.add(new Pos(i, j));
-                    } else if (map[i][j] == 2) {
+                    } 
+                    else if (map[i][j] == 2) {
                         chicken.add(new Pos(i, j));
                     }
                 }
             }
-            if (M <= chicken.size() / 2)
-                comp(chicken.size(), M, "");
-            else
-                comp(chicken.size(), chicken.size() - M, "");
-            System.out.println(chicken.size());
-            System.out.println(home.size());
+            comp(chicken.size(), M, "");
             int min = Integer.MAX_VALUE;
             for (int i = 0; i < store.size(); i++) {
-                int[][] tmp = new int[N][M];
+                int[][] tmp = new int[N][N];
                 String s = store.get(i);
                 for (int j = 0; j < chicken.size(); j++) {
                     if (s.charAt(j) == '1') {
@@ -79,14 +75,18 @@ public class ChickenDelivery {
                     }
                 }
                 int cnt = 0;
+
                 for (int j = 0; j < home.size(); j++) {
                     Pos h = home.get(j);
+                    int Mn = Integer.MAX_VALUE;
                     for (int k = 0; k < chicken.size(); k++) {
                         Pos t = chicken.get(k);
-                        if (tmp[t.x][t.y] == 1)
-                            continue;
-                        cnt += Math.abs(t.x - h.x) + Math.abs(t.y - h.y);
+                        if (tmp[t.x][t.y] == 1){
+                            int m = Math.abs(t.x - h.x) + Math.abs(t.y - h.y);
+                            if(Mn>m) Mn = m;
+                        }
                     }
+                    cnt+=Mn;
                 }
                 if (min > cnt)
                     min = cnt;
