@@ -10,8 +10,8 @@ public class Gear {
 
     static void rotate_clock(int n) {
         int tmp = Gears[n][7];
-        for (int i = 1; i < 8; i++) {
-            Gears[n][i] = Gears[n][i - 1];
+        for (int j = 7; j > 0; j--) {
+            Gears[n][j] = Gears[n][j - 1];
         }
         Gears[n][0] = tmp;
     }
@@ -37,7 +37,7 @@ public class Gear {
             }
         }
         t = d * (-1);
-        for (int i = n - 1; i > 0; i--) {
+        for (int i = n - 1; i >= 0; i--) {
             if (Gears[i + 1][6] != Gears[i][2]) {
                 tmp[i] = t;
                 t = t * (-1);
@@ -73,12 +73,6 @@ public class Gear {
                 int n = Integer.parseInt(st.nextToken()) - 1;
                 int d = Integer.parseInt(st.nextToken());
                 turn_gear(n, d);
-                for (int j = 0; j < 4; j++) {
-                    for (int k = 0; k < 8; k++) {
-                        System.out.print(Gears[j][k] + " ");
-                    }
-                    System.out.println();
-                }
             }
             int cnt = 0;
             if (Gears[0][0] == 1)
