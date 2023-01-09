@@ -5,7 +5,6 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 class Pos {
     int x, y;
@@ -25,106 +24,64 @@ public class Population {
     static int L;
     static int R;
     static int[][] A;
-    static ArrayList<Pos> q = new ArrayList<Pos>();
-    static Pos[][] parent;
     static int[][] visited;
-
-    static void init() {
-        for (int i = 0; i < N; i++) {
-            for (int j = 0; j < N; j++) {
-                parent[i][j] = new Pos(-1, -1);
-                visited[i][j] = 0;
-            }
-        }
+    static ArrayList<Pos> q;
+    static boolean valid(int x,int y){
+        if(x<0||x>=N||y<0||y>=N) return false;
+        return true;
     }
-    
-    static boolean step() {
-        boolean flag = false;
+    static boolean check(int ax,int ay,int bx,int by){
+        int delta = Math.abs(A[ax][ay]-A[bx][by]);
+        if(L<=delta&&delta<=R) return true;
+        return false;
+    }
+    static boolean step(int x,int y){
+        ArrayList<Pos> grp = new ArrayList<Pos>();
+        q = new ArrayList<Pos>();
+        q.add(new Pos(x,y));
         while(!q.isEmpty()){
-            Pos t = q.remove(0);
-            System.out.println(t.toString());
-            if(t.x+1<N){
-                if(visited[t.x+1][t.y]==0){
-                    q.add(new Pos(t.x+1,t.y));
-                    visited[t.x+1][t.y] =1 ;
-                }
-               
-                int sum = Math.abs(A[t.x][t.y]-A[t.x+1][t.y]);
-                if(L<=sum&&sum<=R){
-                    flag = true;
-                    
-                }
+            Pos e = q.remove(0);
+            grp.add(e);
+            if(valid(e.x+1, e.y)&&visited[e.x+1][e.y]==0&&check(e.x, e.y, e.x+1, e.y)){
+                visited[e.x+1][e.y]=1;
+                q.add(new Pos(e.x+1,e.y));
+            } 
+            if(valid(e.x-1,e.y)&&visited[e.x-1][e.y]==0 && check(e.x,e.y,e.x-1,e.y)){
+                visited[e.x-1][e.y]=1;
+                q.add(new Pos(e.x-1,e.y));
             }
-            if(t.x-1>=0){
-                if(visited[t.x-1][t.y]==0){
-                    q.add(new Pos(t.x-1,t.y));
-                    visited[t.x-1][t.y] =1;
-                }
-                
-                int sum = Math.abs(A[t.x][t.y] - A[t.x-1][t.y]);
-                if(L<=sum && sum<=R){
-                    flag = true;
-                    
-                }
+            if(valid(e.x,e.y+1)&&visited[e.x][e.y+1]==0 && check(e.x, e.y, e.x, e.y+1)){
+                visited[e.x][e.y+1]=1;
+                q.add(new Pos(e.x,e.y+1));
             }
-            if(t.y+1<N){
-                if(visited[t.x][t.y+1]==0){
-                    q.add(new Pos(t.x,t.y+1));
-                    visited[t.x][t.y+1] =1;
-                }
-                
-                int sum = Math.abs(A[t.x][t.y+1]-A[t.x][t.y]);
-                if(L<=sum && sum<=R){
-                    flag = true;
-                    
-                }
-            }
-            if(t.y-1>=0){
-                if(visited[t.x][t.y-1]==0){
-                    q.add(new Pos(t.x,t.y-1));
-                    visited[t.x][t.y-1] =1;
-                }
-                
-                int sum = Math.abs(A[t.x][t.y-1] - A[t.x][t.y]);
-                if(L<=sum&&sum<=R){
-                    flag = true;
-                   
-                }
+            if(valid(e.x,e.y-1)&&visited[e.x][e.y-1]==0&&check(e.x,e.y,e.x,e.y-1)){
+                visited[e.x][e.y-1]=1;
+                q.add(new Pos(e.x,e.y-1));
             }
         }
-        HashMap<Pos,Integer> size = new HashMap<Pos,Integer>();
-        HashMap<Pos,Integer> cnt = new HashMap<Pos,Integer>();
-        for (int i = 0; i < N; i++) {
-            for (int j = 0; j < N; j++) {
-                System.out.print(parent[i][j].toString() + " ");
-                Pos t = parent[i][j];
-                if(size.containsKey(t)){
-                    int s = size.get(t);
-                    int c = cnt.get(t);
-                    size.put(t,s+A[i][j]);
-                    cnt.put(t,c+1);
-                }
-                else{
-                    size.put(t,A[i][j]);
-                    cnt.put(t,1);
-                }
-            }
-            System.out.println();
+        if (grp.size()==1) return false;
+        int sum = 0;
+        for(int i=0;i<grp.size();i++){
+            Pos p = grp.get(i);
+            sum+=A[p.x][p.y];
         }
-        System.out.println();
-        for (int i = 0; i < N; i++) {
-            for (int j = 0; j < N; j++) {
-                Pos p = parent[i][j];
-                int s = size.get(p);
-                int c = cnt.get(p);
-                A[i][j] = s/c;
-                System.out.print(A[i][j]+" ");
+        for(Pos p:grp){
+            A[p.x][p.y] = sum/grp.size();
+        }
+        return true;
+    }
+    static boolean migrate(){
+        boolean flag=false;
+        visited = new int[N][N];
+        for(int i=0;i<N;i++){
+            for(int j=0;j<N;j++){
+                if(visited[i][j] == 1) continue;
+                visited[i][j] = 1;
+                flag = step(i,j) || flag;
             }
-            System.out.println();
         }
         return flag;
     }
-
     public static void main(String[] args) {
         try {
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -133,29 +90,19 @@ public class Population {
             L = Integer.parseInt(st.nextToken());
             R = Integer.parseInt(st.nextToken());
             A = new int[N][N];
-            parent = new Pos[N][N];
-            visited = new int[N][N];
-            for (int i = 0; i < N; i++) {
+            for(int i=0;i<N;i++){
                 st = new StringTokenizer(br.readLine());
-                for (int j = 0; j < N; j++) {
+                for(int j=0;j<N;j++){
                     A[i][j] = Integer.parseInt(st.nextToken());
                 }
             }
-            init();
-            visited[0][0]=1;
-            q.add(new Pos(0, 0));
-            step();
-            // boolean flag = true;
-            // int day = 0;
-            // while(flag){
-            //     init();
-            //     visited[0][0] =1;
-            //     q.add(new Pos(0, 0));
-            //     flag = step();
-            //     if(flag) day++;
-            // }
-            // System.out.println(day);
-
+            int day=0;
+            boolean flag = true;
+            while(flag){
+                flag = migrate();
+                if(flag) day++;
+            }
+            System.out.println(day);
             br.close();
         } catch (IOException e) {
             e.printStackTrace();
