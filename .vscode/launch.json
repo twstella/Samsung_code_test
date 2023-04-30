@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CrossWord",
+            "request": "launch",
+            "mainClass": "CrossWord",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Launch",
+            "request": "launch",
+            "mainClass": "${fileBasename}"
+        }
+    ]
+}
