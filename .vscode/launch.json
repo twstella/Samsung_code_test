@@ -1,0 +1,609 @@
+{
+    // IntelliSense를 사용하여 가능한 특성에 대해 알아보세요.
+    // 기존 특성에 대한 설명을 보려면 가리킵니다.
+    // 자세한 내용을 보려면 https://go.microsoft.com/fwlink/?linkid=830387을(를) 방문하세요.
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CrossWord",
+            "request": "launch",
+            "mainClass": "CrossWord",
+            "projectName": "New_Field"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Algospot",
+            "request": "launch",
+            "mainClass": "Algospot",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "AllPath",
+            "request": "launch",
+            "mainClass": "AllPath",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "BabyShark",
+            "request": "launch",
+            "mainClass": "BabyShark",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "BattleGround",
+            "request": "launch",
+            "mainClass": "BattleGround",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Bipartite",
+            "request": "launch",
+            "mainClass": "Bipartite",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "BitSet",
+            "request": "launch",
+            "mainClass": "BitSet",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "BuildRoad",
+            "request": "launch",
+            "mainClass": "BuildRoad",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Card2",
+            "request": "launch",
+            "mainClass": "Card2",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "CardSort",
+            "request": "launch",
+            "mainClass": "CardSort",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Chairman",
+            "request": "launch",
+            "mainClass": "Chairman",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Chicken",
+            "request": "launch",
+            "mainClass": "Chicken",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "CityRoute",
+            "request": "launch",
+            "mainClass": "CityRoute",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Connection",
+            "request": "launch",
+            "mainClass": "Connection",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Coupling",
+            "request": "launch",
+            "mainClass": "Coupling",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Cycle",
+            "request": "launch",
+            "mainClass": "Cycle",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Dice",
+            "request": "launch",
+            "mainClass": "Dice",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "DualPriorityQ",
+            "request": "launch",
+            "mainClass": "DualPriorityQ",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Escape",
+            "request": "launch",
+            "mainClass": "Escape",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Explosion",
+            "request": "launch",
+            "mainClass": "Explosion",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "FindMarble",
+            "request": "launch",
+            "mainClass": "FindMarble",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Floyd",
+            "request": "launch",
+            "mainClass": "Floyd",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Forest",
+            "request": "launch",
+            "mainClass": "Forest",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Gear",
+            "request": "launch",
+            "mainClass": "Gear",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Generation",
+            "request": "launch",
+            "mainClass": "Generation",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Greetings",
+            "request": "launch",
+            "mainClass": "Greetings",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Height",
+            "request": "launch",
+            "mainClass": "Height",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "HideNSeek",
+            "request": "launch",
+            "mainClass": "HideNSeek",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "History",
+            "request": "launch",
+            "mainClass": "History",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Identical_Set",
+            "request": "launch",
+            "mainClass": "Identical_Set",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Iternerary",
+            "request": "launch",
+            "mainClass": "Iternerary",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "JewelTheif",
+            "request": "launch",
+            "mainClass": "JewelTheif",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Labeling",
+            "request": "launch",
+            "mainClass": "Labeling",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "LambdaPQ",
+            "request": "launch",
+            "mainClass": "LambdaPQ",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "LectureRoom",
+            "request": "launch",
+            "mainClass": "LectureRoom",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Liar",
+            "request": "launch",
+            "mainClass": "Liar",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Lineing",
+            "request": "launch",
+            "mainClass": "Lineing",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "MatchMkr",
+            "request": "launch",
+            "mainClass": "MatchMkr",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "MaxFlow",
+            "request": "launch",
+            "mainClass": "MaxFlow",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Median",
+            "request": "launch",
+            "mainClass": "Median",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Meeting",
+            "request": "launch",
+            "mainClass": "Meeting",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "MinHeap",
+            "request": "launch",
+            "mainClass": "MinHeap",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Minho",
+            "request": "launch",
+            "mainClass": "Minho",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "New",
+            "request": "launch",
+            "mainClass": "New",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "NthNum",
+            "request": "launch",
+            "mainClass": "NthNum",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "PartialSum",
+            "request": "launch",
+            "mainClass": "PartialSum",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Party",
+            "request": "launch",
+            "mainClass": "Party",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Prime",
+            "request": "launch",
+            "mainClass": "Prime",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Quit",
+            "request": "launch",
+            "mainClass": "Quit",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Restaurant",
+            "request": "launch",
+            "mainClass": "Restaurant",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "ReturnHome",
+            "request": "launch",
+            "mainClass": "ReturnHome",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "RulerOfLand",
+            "request": "launch",
+            "mainClass": "RulerOfLand",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "SMP",
+            "request": "launch",
+            "mainClass": "SMP",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "SetUnion",
+            "request": "launch",
+            "mainClass": "SetUnion",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "SharkDining",
+            "request": "launch",
+            "mainClass": "SharkDining",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "SimilarWord",
+            "request": "launch",
+            "mainClass": "SimilarWord",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Soak",
+            "request": "launch",
+            "mainClass": "Soak",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "StableAssign",
+            "request": "launch",
+            "mainClass": "StableAssign",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "StartLink",
+            "request": "launch",
+            "mainClass": "StartLink",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Test_director",
+            "request": "launch",
+            "mainClass": "Test_director",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Tomato",
+            "request": "launch",
+            "mainClass": "Tomato",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Virus",
+            "request": "launch",
+            "mainClass": "Virus",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Workout",
+            "request": "launch",
+            "mainClass": "Workout",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "BalancePoint",
+            "request": "launch",
+            "mainClass": "samsung_expert.BalancePoint",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "BinaryCode",
+            "request": "launch",
+            "mainClass": "samsung_expert.BinaryCode",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Building",
+            "request": "launch",
+            "mainClass": "samsung_expert.Building",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Calc",
+            "request": "launch",
+            "mainClass": "samsung_expert.Calc",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Chemical",
+            "request": "launch",
+            "mainClass": "samsung_expert.Chemical",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "CodeScan",
+            "request": "launch",
+            "mainClass": "samsung_expert.CodeScan",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "CommonAnsc",
+            "request": "launch",
+            "mainClass": "samsung_expert.CommonAnsc",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Correctness",
+            "request": "launch",
+            "mainClass": "samsung_expert.Correctness",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Flatten",
+            "request": "launch",
+            "mainClass": "samsung_expert.Flatten",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "KthPrefix",
+            "request": "launch",
+            "mainClass": "samsung_expert.KthPrefix",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "KthSubString",
+            "request": "launch",
+            "mainClass": "samsung_expert.KthSubString",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Matrix",
+            "request": "launch",
+            "mainClass": "samsung_expert.Matrix",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "MaxPrize",
+            "request": "launch",
+            "mainClass": "samsung_expert.MaxPrize",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "MinSpanTree",
+            "request": "launch",
+            "mainClass": "samsung_expert.MinSpanTree",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Nasa",
+            "request": "launch",
+            "mainClass": "samsung_expert.Nasa",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Network",
+            "request": "launch",
+            "mainClass": "samsung_expert.Network",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Operator_space",
+            "request": "launch",
+            "mainClass": "samsung_expert.Operator_space",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "PrimeComp",
+            "request": "launch",
+            "mainClass": "samsung_expert.PrimeComp",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "SupplyRoad",
+            "request": "launch",
+            "mainClass": "samsung_expert.SupplyRoad",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Talentum",
+            "request": "launch",
+            "mainClass": "samsung_expert.Talentum",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "Traveling",
+            "request": "launch",
+            "mainClass": "samsung_expert.Traveling",
+            "projectName": "Samsung_code_test_ffbe203f"
+        },
+        {
+            "type": "java",
+            "name": "tmp",
+            "request": "launch",
+            "mainClass": "samsung_expert.tmp",
+            "projectName": "Samsung_code_test_ffbe203f"
+        }
+    ]
+}
